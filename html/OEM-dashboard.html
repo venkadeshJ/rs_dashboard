@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEM-Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/OEM-dashboard.css">
+</head>
+
+<body>
+    <!--header-->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/images/royal-sundaram-logo.png" alt="Logo" class="d-inline-block align-text-top"
+                    style="width: 200px;height: 60px;">
+            </a>
+        </div>
+    </nav>
+    <!--header ends-->
+    <!--charts start-->
+    <div class="container mt-1">
+        <div class="dashboard-heading">OEM Dashboard</div>
+        <div class="chart-container row row-cols-1 row-cols-md-4 g-4 mt-2">
+            <!--claim notification chart-->
+            <div class="col">
+                <h2 class="chart-title">Claim notification</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--request count chart-->
+            <div class="col">
+                <h2 class="chart-title">Request count</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--response count chart-->
+            <div class="col">
+                <h2 class="chart-title">Response count</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--last request request time-->
+            <div class="col">
+                <h2 class="chart-title">Last request time</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart4"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--last response time-->
+            <div class="col">
+                <h2 class="chart-title">Last response time</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--up or down-->
+            <div class="col">
+                <h2 class="chart-title">up or down</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart6"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--RAG(smile)-->
+            <div class="col">
+                <h2 class="chart-title">RAG(smile)</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: auto!important;">
+                            <canvas id="myChart7"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--web aggregators-->
+            <div class="col">
+                <h2 class="chart-title">web aggregators</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 18rem!important;height: 18rem!important;">
+                            <canvas id="mybarChart" style="width: 18rem!important;height: 18rem!important;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/OEM-dashboard.js"></script>
+</body>
+
+</html>
