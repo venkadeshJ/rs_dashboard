@@ -21,6 +21,16 @@ body {
     text-transform: uppercase;
     text-align: center;
 }
+.policy-chart-title{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 120%;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}
 .box1{
     height: 150px;
     width: 150px;

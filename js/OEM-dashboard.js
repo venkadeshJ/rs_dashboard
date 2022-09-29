@@ -229,4 +229,3 @@ const myChart8 = new Chart(ctx8, {
     }
 });
 
-//Policy processing pie charts

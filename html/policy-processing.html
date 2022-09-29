@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi blocks-Dashboard</title>
+    <title>Policy processing</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/OEM-dashboard.css">
+    <style>
+        body {
+            zoom: 70%;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,10 +29,176 @@
     </nav>
     <!--header ends-->
     <!--charts start-->
-    <div class=" mt-1 container-fluid">
+    <div class="container mt-1">
         <div class="dashboard-heading">Policy Processing</div>
-
+        <div class="policy-chart-title mt-3">Motor</div>
+        <div class="chart-container row row-cols-1 row-cols-md-2 mt-2 justify-content-center">
+            <div class="col-lg-4">
+                <h2 class="chart-title">Inwards for the day</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 20rem!important;height: auto!important;">
+                            <canvas id="myChart9"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="chart-title">Pending policy issuance</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 20rem!important;height: auto!important;">
+                            <canvas id="myChartpietwo"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="policy-chart-title mt-4">Non Motor</div>
+        <div class="chart-container row row-cols-1 row-cols-md-2 mt-2 justify-content-center">
+            <div class="col-lg-4">
+                <h2 class="chart-title">Inwards for the day</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 20rem!important;height: auto!important;">
+                            <canvas id="myChartpiethree"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="chart-title">Pending policy issuance</h2>
+                <div class="card" style="width: fit-content;">
+                    <div class="card-body">
+                        <div style="width: 20rem!important;height: auto!important;">
+                            <canvas id="myChartpiefour"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        //Policy processing pie charts
+        //pie chart one
+        const ctx9 = document.getElementById('myChart9');
+        const myChart9 = new Chart(ctx9, {
+            type: 'pie',
+            data: {
+                labels: ['Renewals', 'Fresh'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [8, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        //pie chart two
+        const ctxpietwo = document.getElementById('myChartpietwo');
+        const myChartpietwo = new Chart(ctxpietwo, {
+            type: 'pie',
+            data: {
+                labels: ['Info', 'Others'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [3, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        //pie chart three
+        const ctxpiethree = document.getElementById('myChartpiethree');
+        const myChartpiethree = new Chart(ctxpiethree, {
+            type: 'pie',
+            data: {
+                labels: ['Renewals', 'Fresh'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [6, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        //pie chart four
+        const ctxpiefour = document.getElementById('myChartpiefour');
+        const myChartpiefour = new Chart(ctxpiefour, {
+            type: 'pie',
+            data: {
+                labels: ['Info', 'Medial', 'Others'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [6, 3, 4],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        var timer = setTimeout(function () {
+            window.location = 'claims-dashboard.html'
+        }, 10000);
+    </script>
     <script src="../js/OEM-dashboard.js"></script>
 </body>
 
